@@ -29,7 +29,6 @@ $(document).ready(function(){
         }
         var targetUrl = wantedFormatIn+userValue+key+units;
         $.getJSON(targetUrl, function(data){
-            alert(targetUrl);
             var lat = data.coord.lat;
             var lon = data.coord.lon;
             var temp = data.main.temp;
