@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="style.css">
+        <script
+                src="http://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
+    </head>
+    <body>
+       <h1 id="headline">Weather App</h1>
+        <div id="wrapper">
+            <header>
+                <div id="search-info">
+                    <select name="search-format" id="search-format">
+                        <option value="city">Enter city</option>
+                        <option value="coordinates">Enter coordinates</option>
+                        <option value="zip-code">Enter zip Code</option>
+                    </select>
+                    <input type="text" id="search" placeholder="Exp: London">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+                <h1 id="location-info"></h1>
+                <h3 id="time-info"></h3>
+                <h3 id="weather-description"></h3>
+            </header>
+            <main>
+                <section id="temperature">
+                    <div id="temp-value"><span></span></div>
+                    <div id="icon"></div>
+                </section>
+                <section id="additional-info">
+                    <div id="humidity">
+                        <img class="hide" src="images/humidity-drops-rain-water-weather-forecast-3bb2c721a206e7e7-512x512.png" alt="the icon of humidity">
+                        <span></span>
+                    </div>
+                    <div id="wind-speed">
+                        <img class="hide" src="images/wind1-512.png" alt="weather wind icon">
+                        <span></span>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

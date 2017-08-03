@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.active {
+    color: orange;
+}
+.hide {
+    display: none;
+}
+#headline {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+#search-format {
+    padding: 10px 0;
+}
+#search {
+    padding: 10px 0;
+}
+#submit {
+    padding: 10px;
+}
+#wrapper {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+header {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+main {
+    margin-top: 20px;
+    display: block;
+    height: 140px;
+}
+main #temperature {
+    width: 46%;
+    height: inherit;
+    margin: 0 0 0 4%;
+    float: left;
+}
+#icon {
+    float: right;
+    width: 80px;
+    height: 80px;
+    margin: 30px 0 30px 0;
+    background-size: cover;
+}
+#temp-value {
+    float: right;
+    width: 108px;
+    margin: 26px 0 34px 0;
+    text-align: left;
+    line-height: 80px;
+    position: relative;
+}
+#temp-value span {
+    font-size: 40px;
+    font-weight: bold;
+    height: 100px;
+}
+main #additional-info {
+    width: 46%;
+    height: inherit;
+    margin: 0 2%;
+    float: left;
+    padding-left: 30px;
+    padding-top: 35px;
+}
+#weather-description {
+	text-transform: capitalize;
+}
+#location-info {
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+#humidity {
+    height: 30px;
+}
+#humidity img {
+	width: 30px;
+	float: left;
+}
+#wind-speed {
+    height: 30px;
+}
+#wind-speed img {
+    width: 30px;
+    float: left;
+}
+#wind-speed span, #humidity span {
+    float: left;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.button {
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.switch-degree {
+    float: right;
+    height: 100px;
+    width: 78px;
+    text-align: left;
+    position: absolute;
+    left: 44%;
+    top: -10%;
+    font-size: 30px;
+}
