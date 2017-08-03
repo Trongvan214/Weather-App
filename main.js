@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var searchInputBox = $('#search');
-    $('#search-format').change(function(){
+    $('#search-format').change(function(){              //switching placeholder when changing the option value
         if($('#search-format').val() == "city") {
             searchInputBox.attr('placeholder', 'Exp: London');
         }
@@ -11,11 +11,11 @@ $(document).ready(function(){
             searchInputBox.attr('placeholder', 'Exp: 67211');
         }
     });
-    $('#submit').on('click', function(){
-        var wantedFormatIn, units = "&units=imperial";
+    $('#submit').on('click', function(){       
+        var wantedFormatIn, units = "&units=imperial";              //parameters of url query
         const key = "&APPID=1498bed46b956aa47fc7d61fef70fa32";
         var userValue = $('#search').val();
-        if($('#search-format').val() == "city") {
+        if($('#search-format').val() == "city") {                    //switching the url search config base on search format
             wantedFormatIn = "http://api.openweathermap.org/data/2.5/weather?q=";
         }
         else if($('#search-format').val() == "coordinates") {
@@ -27,7 +27,7 @@ $(document).ready(function(){
         else {
             wantedFormatIn = "http://api.openweathermap.org/data/2.5/weather?zip=";
         }
-        var targetUrl = wantedFormatIn+userValue+key+units;
+        var targetUrl = wantedFormatIn+userValue+key+units;           //full url build base on user inputs
         $.getJSON(targetUrl, function(data){
             var lat = data.coord.lat;
             var lon = data.coord.lon;
@@ -40,7 +40,6 @@ $(document).ready(function(){
             var cityName = data.name;
             var iconUrl = "http://openweathermap.org/img/w/"+iconCode+".png";
             $('#temp-value').append('<div class="switch-degree"><h6 class="button active b1">&deg;F</h6> | <h6 class="button b2">&deg;C</h6></div>');
-            timeInfo(lat,lon);
             $('#location-info').html(cityName);
             $('#weather-description').html(weatherDescription);
             $('#temp-value span').html(Math.round(temp));
@@ -48,7 +47,7 @@ $(document).ready(function(){
             $('#wind-speed span').html('Wind: '+ windSpeed + "MPH");
             $('#icon').css('background-image', 'url('+iconUrl+')');
             $('#humidity img, #wind-speed img').removeClass('hide');
-            $('h6.b1').on('click', function(){
+            $('h6.b1').on('click', function(){                         //switching degree and the math to convert 
                 if($('.b2').hasClass('active')){
                     $('.b2').removeClass('active');
                     $('.b1').addClass('active');
@@ -62,6 +61,7 @@ $(document).ready(function(){
                 }
                 $('#temp-value span').html(Math.round((temp-32)*(5/9)));
             });
+            timeInfo(lat,lon);                                         //function that return current time of that location
         });
     });
     function timeInfo(lat, lon){
@@ -84,8 +84,8 @@ $(document).ready(function(){
                 }
             }
             var currentMinutes = new Date().getMinutes();
-            if(currentHours() > 12) {
-                if (currentMinutes < 10){
+            if(currentHours() > 12) {                                     //24hours format time (solution)
+                if (currentMinutes < 10){                                 //single digit cases 
                     $('#time-info').html(currentHours()%12+":0"+currentMinutes+" PM");
                 }
                 else {
