@@ -1,0 +1,159 @@
+@import 'variable'
+@import 'mixin'
+//reset 
+* 
+    margin: 0
+    padding: 0
+    border: 0
+    box-sizing: border-box
+body 
+    overflow: auto
+//global classes
+.active 
+    color: orange
+//hide everything but the search bar when program starts
+.hide 
+    display: none
+//switch degree option button
+.button 
+    display: inline-block
+    font-size: 25px
+    cursor: pointer
+//main content styles starts
+#wrapper
+    +abs-center
+    width: $wrapper-width
+    height: auto
+
+#headline 
+    text-align: center
+    width: 100%
+    font-size: $headline-font-size
+    display: block
+header
+    text-align: center 
+    display: block
+    margin-top: 50px
+    #search-info
+        display: block   
+        #search-format 
+            padding: 10px 0
+        #search 
+            padding: 10px 0 10px 5px
+        #submit 
+            padding: 10px
+    #location-info 
+        margin-top: 30px
+        text-transform: capitalize
+    #weather-description 
+        text-transform: capitalize  
+main 
+    +no-highlighting
+    margin-top: 20px
+    display: block
+    height: $main-body-height
+    #temperature 
+        width: $wrapper-width / 2
+        height: $main-body-height
+        float: left
+        padding-left: 50px
+        & h1 
+            float: left
+            font-size: 40px
+            font-weight: bold
+            line-height: $main-body-height
+        #icon 
+            width: 30%
+            height: $main-body-height
+            float: left
+            background-position: center center
+            background-size: 100px 100px
+            background-repeat: no-repeat
+        .switch-degree 
+            float: left
+            text-align: center
+            height: $main-body-height
+            font-size: 30px 
+    #additional-info 
+        width: $wrapper-width / 2
+        height: $main-body-height
+        float: right
+        padding-left: 30px
+        #humidity 
+            height: 30px
+            margin-top: 10px
+            & img 
+                width: 30px
+                float: left
+        #wind-speed 
+            height: 30px
+            & img 
+                width: 30px
+                float: left
+
+#wind-speed span, #humidity span 
+    float: left
+    line-height: 30px
+    margin-left: 20px
+
+//start media queries 
++media(425px)
+    #wrapper
+        width: 100%
+        #headline
+            font-size: $headline-font-size * 0.8
+        main
+            margin: 0
+            #temperature
+                width: 100%
+                padding-left: 150px
+                float: none
+                & h1
+                    font-size: 30px
+                .switch-degree
+                    padding-top: 15px
+                    font-size: 25px
+                #icon 
+                    background-size: 80px 80px
+                    width: 20%
+            #additional-info
+                width: 100%
+                padding-left: 30%
+                float: none
+
++media(375px) 
+    #wrapper
+        #headline
+            font-size: $headline-font-size * 0.7
+        header
+            #search-info
+                #search-format
+                    width: 90px
+                #search
+                    width: 120px
+        main
+            margin: 0
+            #temperature
+                width: 100%
+                padding-left: 123px
+                float: none
+
++media(320px) 
+    #wrapper
+        #headline
+            font-size: $headline-font-size * 0.7
+        header
+            #search-info
+                #search-format
+                    width: 90px
+                #search
+                    width: 120px
+        main
+            margin: 0
+            #temperature
+                width: 100%
+                padding-left: 100px
+                float: none
+            #additional-info
+                padding-left: 80px
+

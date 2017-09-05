@@ -11,14 +11,14 @@
                 crossorigin="anonymous"></script>
     </head>
     <body>
-       <h1 id="headline">Weather App</h1>
         <div id="wrapper">
+            <h1 id="headline">Weather App</h1>
             <header>
                 <div id="search-info">
                     <select name="search-format" id="search-format">
                         <option value="city">Enter city</option>
                         <option value="coordinates">Enter coordinates</option>
-                        <option value="zip-code">Enter zip Code</option>
+                        <option value="zip-code">Enter Zip Code</option>
                     </select>
                     <input type="text" id="search" placeholder="Exp: London">
                     <button type="submit" id="submit">Search</button>
@@ -27,18 +27,23 @@
                 <h3 id="time-info"></h3>
                 <h3 id="weather-description"></h3>
             </header>
-            <main>
+            <main class="hide">
                 <section id="temperature">
-                    <div id="temp-value"><span></span></div>
-                    <div id="icon"></div>
+                        <h1></h1>
+                        <div class="switch-degree">
+                            <span class="button active b1">&deg;F</span>
+                            <span class="pipe">|</span>
+                            <span class="button b2">&deg;C</span>
+                        </div>
+                        <div id="icon"></div>
                 </section>
                 <section id="additional-info">
                     <div id="humidity">
-                        <img class="hide" src="images/humidity-drops-rain-water-weather-forecast-3bb2c721a206e7e7-512x512.png" alt="the icon of humidity">
+                        <img src="images/humidity-drops-rain-water-weather-forecast-3bb2c721a206e7e7-512x512.png" alt="the icon of humidity">
                         <span></span>
                     </div>
                     <div id="wind-speed">
-                        <img class="hide" src="images/wind1-512.png" alt="weather wind icon">
+                        <img  src="images/wind1-512.png" alt="weather wind icon">
                         <span></span>
                     </div>
                 </section>
