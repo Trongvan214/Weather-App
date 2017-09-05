@@ -29,17 +29,13 @@ $(document).ready(function(){
         }
         var targetUrl = wantedFormatIn+userValue+key+units;           //full url build base on user inputs
         $.ajax({
-            method: 'get',
+            type: "get",
             url: targetUrl,
-            success: function(data){
-                getWeather(data);
+            success: function(data) {
+              getWeather(data);
             }
-            error: function()
-            {
-                $('body').append(<p>it didin't work</p>);
-            }
-        })                                        //function that return current time of that location
-    }); 
+        });
+    });
 });
 function getWeather(data){
     var lat = data.coord.lat;
@@ -73,7 +69,11 @@ function getWeather(data){
         }
         $('#temperature h1').html(Math.round((temp-32)*(5/9)));
     });
+<<<<<<< HEAD
     timeInfo(lat,lon); 
+=======
+    timeInfo(lat,lon);                                         //function that return current time of that location
+>>>>>>> a5b83afd6328260c78025aa202cf0a278151378a
 }
 function timeInfo(lat, lon){
     var currentTimeInSec = Math.round(new Date().getTime()/1000);
@@ -83,6 +83,7 @@ function timeInfo(lat, lon){
     const key = "&key=AIzaSyDPLledCWfdfdmt0L4k_7chldSYd5tCATs";
     var googleTimeZoneUrl = googlePrototypeUrl+location+timeStamp+key;
     $.ajax({
+<<<<<<< HEAD
         method: 'get',
         url: googleTimeZoneUrl,
         success: function(data){
@@ -91,6 +92,17 @@ function timeInfo(lat, lon){
     });
  }
 function getCurrentTime(data){
+=======
+        type: "get",
+        url: googleTimeZoneUrl,
+        success: function(data) {
+          getCurrentTime(data);
+        }
+    });
+}
+function getCurrentTime(data)
+{
+>>>>>>> a5b83afd6328260c78025aa202cf0a278151378a
     var hoursDifferent = (data.rawOffset+data.dstOffset)/3600;
     var currentHours = function(){
         var UTCHours = new Date().getUTCHours();
@@ -119,4 +131,8 @@ function getCurrentTime(data){
             $('#time-info').html(currentHours()+":"+currentMinutes+" AM");  
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a5b83afd6328260c78025aa202cf0a278151378a
