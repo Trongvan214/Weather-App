@@ -34,6 +34,10 @@ $(document).ready(function(){
             success: function(data){
                 getWeather(data);
             }
+            error: function()
+            {
+                $('body').append(<p>it didin't work</p>);
+            }
         })                                        //function that return current time of that location
     }); 
 });
@@ -86,7 +90,6 @@ function timeInfo(lat, lon){
         }
     });
  }
-
 function getCurrentTime(data){
     var hoursDifferent = (data.rawOffset+data.dstOffset)/3600;
     var currentHours = function(){
