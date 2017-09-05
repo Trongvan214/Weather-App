@@ -34,6 +34,9 @@ $(document).ready(function(){
             success: function(data) {
               getWeather(data);
             }
+            error: function(){
+                $('body').append(<p>the ajax call didn't work</p>);
+            }
         });
     });
 });
