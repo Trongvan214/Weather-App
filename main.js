@@ -16,7 +16,7 @@ $(document).ready(function(){
         const key = "&APPID=1498bed46b956aa47fc7d61fef70fa32";
         var userValue = $('#search').val();
         if($('#search-format').val() == "city") {                    //switching the url search config base on search format
-            wantedFormatIn = "http://api.openweathermap.org/data/2.5/weather?q=";
+            wantedFormatIn = "https://api.openweathermap.org/data/2.5/weather?q=";
         }
         else if($('#search-format').val() == "coordinates") {
             var latCoord = userValue.split(",")[0];
