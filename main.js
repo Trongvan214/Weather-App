@@ -16,7 +16,7 @@ $(document).ready(function(){
         const key = "&APPID=1498bed46b956aa47fc7d61fef70fa32";
         var userValue = $('#search').val();
         if($('#search-format').val() == "city") {                    //switching the url search config base on search format
-            wantedFormatIn = "http://api.openweathermap.org/data/2.5/weather?q=";
+            wantedFormatIn = "https://api.openweathermap.org/data/2.5/weather?q=";
         }
         else if($('#search-format').val() == "coordinates") {
             var latCoord = userValue.split(",")[0];
@@ -33,9 +33,6 @@ $(document).ready(function(){
             url: targetUrl,
             success: function(data) {
               getWeather(data);
-            }
-            error: function(){
-                $('body').append(<p>the ajax call didn't work</p>);
             }
         });
     });
@@ -72,11 +69,7 @@ function getWeather(data){
         }
         $('#temperature h1').html(Math.round((temp-32)*(5/9)));
     });
-<<<<<<< HEAD
-    timeInfo(lat,lon); 
-=======
     timeInfo(lat,lon);                                         //function that return current time of that location
->>>>>>> a5b83afd6328260c78025aa202cf0a278151378a
 }
 function timeInfo(lat, lon){
     var currentTimeInSec = Math.round(new Date().getTime()/1000);
@@ -86,16 +79,6 @@ function timeInfo(lat, lon){
     const key = "&key=AIzaSyDPLledCWfdfdmt0L4k_7chldSYd5tCATs";
     var googleTimeZoneUrl = googlePrototypeUrl+location+timeStamp+key;
     $.ajax({
-<<<<<<< HEAD
-        method: 'get',
-        url: googleTimeZoneUrl,
-        success: function(data){
-            getCurrentTime(data);
-        }
-    });
- }
-function getCurrentTime(data){
-=======
         type: "get",
         url: googleTimeZoneUrl,
         success: function(data) {
@@ -105,7 +88,6 @@ function getCurrentTime(data){
 }
 function getCurrentTime(data)
 {
->>>>>>> a5b83afd6328260c78025aa202cf0a278151378a
     var hoursDifferent = (data.rawOffset+data.dstOffset)/3600;
     var currentHours = function(){
         var UTCHours = new Date().getUTCHours();
@@ -134,8 +116,4 @@ function getCurrentTime(data)
             $('#time-info').html(currentHours()+":"+currentMinutes+" AM");  
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a5b83afd6328260c78025aa202cf0a278151378a
