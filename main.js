@@ -47,7 +47,7 @@ function getWeather(data){
     var weatherDescription = data.weather[0].description;
     var iconCode = data.weather[0].icon;
     var cityName = data.name;
-    var iconUrl = "http://openweathermap.org/img/w/"+iconCode+".png";
+    var iconUrl = "https://openweathermap.org/img/w/"+iconCode+".png";
     $('#location-info').html(cityName);
     $('#weather-description').html(weatherDescription);
     $('#temperature h1').html(Math.round(temp));
