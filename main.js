@@ -21,11 +21,11 @@ $(document).ready(function(){
         else if($('#search-format').val() == "coordinates") {
             var latCoord = userValue.split(",")[0];
             var lonCoord = userValue.split(",")[1];
-            wantedFormatIn = "http://api.openweathermap.org/data/2.5/weather?lat="+latCoord+"&lon="+lonCoord;
+            wantedFormatIn = "https://api.openweathermap.org/data/2.5/weather?lat="+latCoord+"&lon="+lonCoord;
             userValue = "";
         }
         else {
-            wantedFormatIn = "http://api.openweathermap.org/data/2.5/weather?zip=";
+            wantedFormatIn = "https://api.openweathermap.org/data/2.5/weather?zip=";
         }
         var targetUrl = wantedFormatIn+userValue+key+units;           //full url build base on user inputs
         $.ajax({
