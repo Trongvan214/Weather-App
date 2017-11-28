@@ -1,157 +1,157 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box; }
-
-body {
-  overflow: auto; }
-
-.active {
-  color: orange; }
-
-.hide {
-  display: none; }
-
-.button {
-  display: inline-block;
-  font-size: 25px;
-  cursor: pointer; }
-
-#wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: auto; }
-
-#headline {
-  text-align: center;
-  width: 100%;
-  font-size: 50px;
-  display: block; }
-
-header {
-  text-align: center;
-  display: block;
-  margin-top: 50px; }
-  header #search-info {
-    display: block; }
-    header #search-info #search-format {
-      padding: 10px 0; }
-    header #search-info #search {
-      padding: 10px 0 10px 5px; }
-    header #search-info #submit {
-      padding: 10px; }
-  header #location-info {
-    margin-top: 30px;
-    text-transform: capitalize; }
-  header #weather-description {
-    text-transform: capitalize; }
-
-main {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-top: 20px;
-  display: block;
-  height: 80px; }
-  main #temperature {
-    width: 250px;
-    height: 80px;
-    float: left;
-    padding-left: 50px; }
-    main #temperature h1 {
-      float: left;
-      font-size: 40px;
-      font-weight: bold;
-      line-height: 80px; }
-    main #temperature #icon {
-      width: 30%;
-      height: 80px;
-      float: left;
-      background-position: center center;
-      background-size: 100px 100px;
-      background-repeat: no-repeat; }
-    main #temperature .switch-degree {
-      float: left;
-      text-align: center;
-      height: 80px;
-      font-size: 30px; }
-  main #additional-info {
-    width: 250px;
-    height: 80px;
-    float: right;
-    padding-left: 30px; }
-    main #additional-info #humidity {
-      height: 30px;
-      margin-top: 10px; }
-      main #additional-info #humidity img {
-        width: 30px;
-        float: left; }
-    main #additional-info #wind-speed {
-      height: 30px; }
-      main #additional-info #wind-speed img {
-        width: 30px;
-        float: left; }
-
-#wind-speed span, #humidity span {
-  float: left;
-  line-height: 30px;
-  margin-left: 20px; }
-
-@media screen and (max-width: 425px) {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box; }
+  
+  body {
+	overflow: auto; }
+  
+  .active {
+	color: orange; }
+  
+  .hide {
+	display: none; }
+  
+  .button {
+	display: inline-block;
+	font-size: 25px;
+	cursor: pointer; }
+  
   #wrapper {
-    width: 100%; }
-    #wrapper #headline {
-      font-size: 40px; }
-    #wrapper main {
-      margin: 0; }
-      #wrapper main #temperature {
-        width: 100%;
-        padding-left: 150px;
-        float: none; }
-        #wrapper main #temperature h1 {
-          font-size: 30px; }
-        #wrapper main #temperature .switch-degree {
-          padding-top: 15px;
-          font-size: 25px; }
-        #wrapper main #temperature #icon {
-          background-size: 80px 80px;
-          width: 20%; }
-      #wrapper main #additional-info {
-        width: 100%;
-        padding-left: 30%;
-        float: none; } }
-@media screen and (max-width: 375px) {
-  #wrapper #headline {
-    font-size: 35px; }
-  #wrapper header #search-info #search-format {
-    width: 90px; }
-  #wrapper header #search-info #search {
-    width: 120px; }
-  #wrapper main {
-    margin: 0; }
-    #wrapper main #temperature {
-      width: 100%;
-      padding-left: 123px;
-      float: none; } }
-@media screen and (max-width: 320px) {
-  #wrapper #headline {
-    font-size: 35px; }
-  #wrapper header #search-info #search-format {
-    width: 90px; }
-  #wrapper header #search-info #search {
-    width: 120px; }
-  #wrapper main {
-    margin: 0; }
-    #wrapper main #temperature {
-      width: 100%;
-      padding-left: 100px;
-      float: none; }
-    #wrapper main #additional-info {
-      padding-left: 80px; } }
-
-/*# sourceMappingURL=style.css.map */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	height: auto; }
+  
+  #headline {
+	text-align: center;
+	width: 100%;
+	font-size: 50px;
+	display: block; }
+  
+  header {
+	text-align: center;
+	display: block;
+	margin-top: 50px; }
+	header #search-info {
+	  display: block; }
+	  header #search-info #search-format {
+		padding: 10px 0; }
+	  header #search-info #search {
+		padding: 10px 0 10px 5px; }
+	  header #search-info #submit {
+		padding: 10px; }
+	header #location-info {
+	  margin-top: 30px;
+	  text-transform: capitalize; }
+	header #weather-description {
+	  text-transform: capitalize; }
+  
+  main {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-top: 20px;
+	display: block;
+	height: 80px; }
+	main #temperature {
+	  width: 250px;
+	  height: 80px;
+	  float: left;
+	  padding-left: 50px; }
+	  main #temperature h1 {
+		float: left;
+		font-size: 40px;
+		font-weight: bold;
+		line-height: 80px; }
+	  main #temperature #icon {
+		width: 30%;
+		height: 80px;
+		float: left;
+		background-position: center center;
+		background-size: 100px 100px;
+		background-repeat: no-repeat; }
+	  main #temperature .switch-degree {
+		float: left;
+		text-align: center;
+		height: 80px;
+		font-size: 30px; }
+	main #additional-info {
+	  width: 250px;
+	  height: 80px;
+	  float: right;
+	  padding-left: 30px; }
+	  main #additional-info #humidity {
+		height: 30px;
+		margin-top: 10px; }
+		main #additional-info #humidity img {
+		  width: 30px;
+		  float: left; }
+	  main #additional-info #wind-speed {
+		height: 30px; }
+		main #additional-info #wind-speed img {
+		  width: 30px;
+		  float: left; }
+  
+  #wind-speed span, #humidity span {
+	float: left;
+	line-height: 30px;
+	margin-left: 20px; }
+  
+  @media screen and (max-width: 425px) {
+	#wrapper {
+	  width: 100%; }
+	  #wrapper #headline {
+		font-size: 40px; }
+	  #wrapper main {
+		margin: 0; }
+		#wrapper main #temperature {
+		  width: 100%;
+		  padding-left: 150px;
+		  float: none; }
+		  #wrapper main #temperature h1 {
+			font-size: 30px; }
+		  #wrapper main #temperature .switch-degree {
+			padding-top: 15px;
+			font-size: 25px; }
+		  #wrapper main #temperature #icon {
+			background-size: 80px 80px;
+			width: 20%; }
+		#wrapper main #additional-info {
+		  width: 100%;
+		  padding-left: 30%;
+		  float: none; } }
+  @media screen and (max-width: 375px) {
+	#wrapper #headline {
+	  font-size: 35px; }
+	#wrapper header #search-info #search-format {
+	  width: 90px; }
+	#wrapper header #search-info #search {
+	  width: 120px; }
+	#wrapper main {
+	  margin: 0; }
+	  #wrapper main #temperature {
+		width: 100%;
+		padding-left: 123px;
+		float: none; } }
+  @media screen and (max-width: 320px) {
+	#wrapper #headline {
+	  font-size: 35px; }
+	#wrapper header #search-info #search-format {
+	  width: 90px; }
+	#wrapper header #search-info #search {
+	  width: 120px; }
+	#wrapper main {
+	  margin: 0; }
+	  #wrapper main #temperature {
+		width: 100%;
+		padding-left: 100px;
+		float: none; }
+	  #wrapper main #additional-info {
+		padding-left: 80px; } }
+  
+  /*# sourceMappingURL=style.css.map */

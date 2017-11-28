@@ -100,20 +100,7 @@ function getCurrentTime(data)
         }
     }
     var currentMinutes = new Date().getMinutes();
-    if(currentHours() > 12) {                                     //24hours format time (solution)
-        if (currentMinutes < 10){                                 //single digit cases 
-            $('#time-info').html(currentHours()%12+":0"+currentMinutes+" PM");
-        }
-        else {
-            $('#time-info').html(currentHours()%12+":"+currentMinutes+" PM");
-        }
-    }
-    else {
-        if (currentMinutes < 10){
-            $('#time-info').html(currentHours()+":0"+currentMinutes+" AM");
-        }
-        else {
-            $('#time-info').html(currentHours()+":"+currentMinutes+" AM");  
-        }
-    }
+    var min = ("0"+currentMinutes.toString()).slice(-2);
+    var hour = ("0"+currentHours()).slice(-2);
+    $('#time-info').html(hour+":"+min);
 }
