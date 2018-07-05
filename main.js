@@ -11,6 +11,27 @@ $(document).ready(function(){
             searchInputBox.attr('placeholder', 'Exp: 67211');
         }
     });
+
+    //using geolocation to put current location
+    function success(pos) {
+        let latitude = pos.coords.latitude;
+        let longitude = pos.coords.longitude;
+        let wantedFormatIn = "https://api.openweathermap.org/data/2.5/weather?lat="+pos.coords.latitude+"&lon="+pos.coords.longitude;
+        let units = "&units=imperial";                  //parameters of url query
+        const key = "&APPID=1498bed46b956aa47fc7d61fef70fa32";
+        var targetUrl = wantedFormatIn+key+units;             //full url build base on user inputs
+        $.ajax({
+            type: "get",
+            url: targetUrl,
+            success: function(data) {
+              getWeather(data);
+            }
+        });
+    }
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(success);
+    }
+
     $('#submit').on('click', function(){  
         var wantedFormatIn, units = "&units=imperial";              //parameters of url query
         const key = "&APPID=1498bed46b956aa47fc7d61fef70fa32";
@@ -104,3 +125,4 @@ function getCurrentTime(data)
     var hour = ("0"+currentHours()).slice(-2);
     $('#time-info').html(hour+":"+min);
 }
+
